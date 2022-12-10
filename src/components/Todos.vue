@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <h1>Todos</h1>
-        <div v-for='todo in todos' v-bind:key="todo.id">
+    <div class="todo">
+        <!-- <h1>Todos</h1> -->
+        <div  v-for='todo in todos' v-bind:key="todo.id">
             <!-- {{todo.title}} -->
-            <TodoItem v-bind:todoP="todo" v-on:del-todo="$emit('del-todo', todo.id)" />
+            <TodoItem v-bind:todoP="todo" v-on:del-todo="$emit('del-todo1', todo.id)" />
         </div>
          
     </div>
@@ -19,4 +19,7 @@ export default {
 }
 </script>
 <style scoped>
+.todo{
+    padding: 20px;
+}
 </style>
